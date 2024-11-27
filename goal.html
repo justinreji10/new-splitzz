@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker - Goal Setting</title>
+  <link rel="stylesheet" href="goal.css">
+</head>
+<body>
+  <header>
+    <h1>Goal Setting</h1>
+  </header>
+  <main>
+    <section id="goal-setting">
+      <h2>Set Your Goals</h2>
+      <form id="goal-form">
+        <label for="goal-type">Goal Type:</label>
+        <select id="goal-type">
+          <option value="individual">Individual Goal</option>
+          <option value="group">Group Goal</option>
+        </select>
+        
+        <label for="goal-name">Goal Name:</label>
+        <input type="text" id="goal-name" placeholder="E.g., Save for a trip" required>
+        
+        <label for="goal-amount">Goal Amount:</label>
+        <input type="number" id="goal-amount" step="0.01" placeholder="E.g., 1000.50" required>
+        
+        <div id="group-users" class="hidden">
+          <label for="user-list">Add Users (comma-separated):</label>
+          <input type="text" id="user-list" placeholder="E.g., user1, user2">
+        </div>
+        
+        <button type="submit">Add Goal</button>
+      </form>
+      
+      <section id="goals-list">
+        <h2>Goals List</h2>
+        <ul id="goals"></ul>
+      </section>
+    </section>
+  </main>
+  <script src="goal.js"></script>
+</body>
+</html>
